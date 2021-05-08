@@ -28,7 +28,8 @@ def get_data():
         indicator = ta.rsi(df['close'], length=int(indicator_period))
     indicator = indicator.fillna('undefined')
     dict = indicator.to_dict()
-    result = {'open value': response[99-int(candle)][1], 'high value': response[99-int(candle)][2],
+    result = {'open value': response[99-int(candle)][1],
+              'high value': response[99-int(candle)][2],
               'low value': response[99-int(candle)][3],
               'close value': response[99-int(candle)][4],
               'timestamp': response[99-int(candle)][0],
